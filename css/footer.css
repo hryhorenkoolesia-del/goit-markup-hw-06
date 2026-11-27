@@ -1,6 +1,6 @@
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 .footer-link {
   font-family: "Raleway", sans-serif;
@@ -28,10 +28,13 @@
 }
 .footer .container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 .footer-info {
-  margin-right: 120px;
+  margin-right: 0;
+  text-align: center;
 }
 .footer-social-title {
   font-weight: 500;
@@ -63,7 +66,9 @@
   background-color: #31d0aa;
 }
 .footer-subscribe {
-  margin-left: 83px;
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
 }
 .footer-subscribe-title {
   font-weight: 500;
@@ -76,7 +81,9 @@
 
 .footer-subscribe-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-subscribe-input {
@@ -84,7 +91,7 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  width: 264px;
+  width: 100%;
   height: 40px;
   padding: 8px 16px;
   border: 1px solid #fff;
@@ -127,4 +134,69 @@
 .footer-subscribe-btn:hover,
 .footer-subscribe-btn:focus {
   background-color: #31d0aa;
+}
+@media screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding-left: 108px;
+  }
+
+  .footer-info {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .footer-subscribe {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-subscribe-form {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .footer-subscribe-input {
+    width: 264px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0;
+    padding-left: 15px;
+  }
+
+  .footer-info {
+    margin-right: 120px;
+    text-align: left;
+  }
+
+  .footer-subscribe {
+    width: auto;
+    margin-left: 83px;
+    text-align: left;
+  }
+
+  .footer-subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-subscribe-input {
+    width: 264px;
+  }
 }

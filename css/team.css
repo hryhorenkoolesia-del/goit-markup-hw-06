@@ -13,12 +13,14 @@
 }
 .team-title-list {
   display: flex;
-  gap: 24px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 .team-list-item {
   background-color: #ffffff;
-  width: calc((100% - 24px * 3) / 4);
+  width: 264px;
+  max-width: 100%;
   border-radius: 0 0 4px 4px;
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -68,4 +70,31 @@
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: #404bbf;
+}
+@media screen and (min-width: 768px) {
+  .team-title-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .team-list-item {
+    width: 264px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .team {
+    padding: 120px 0;
+  }
+
+  .team-title-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .team-list-item {
+    width: calc((100% - 72px) / 4);
+  }
 }
